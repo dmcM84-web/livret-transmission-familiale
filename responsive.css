@@ -1,0 +1,165 @@
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+/* Grand écran */
+
+@media (min-width:1400px){
+
+    main{
+
+        max-width:1200px;
+
+        margin:auto;
+
+    }
+
+}
+
+/* Tablette */
+
+@media (max-width:992px){
+
+    #app{
+
+        display:block;
+
+    }
+
+    aside{
+
+        position:relative;
+
+        width:100%;
+
+        height:auto;
+
+        margin-bottom:20px;
+
+        border-right:none;
+
+    }
+
+    aside .list-group{
+
+        display:flex;
+
+        overflow-x:auto;
+
+        gap:10px;
+
+    }
+
+    aside .list-group a{
+
+        min-width:180px;
+
+    }
+
+    main{
+
+        padding:20px;
+
+    }
+
+}
+
+/* Téléphone */
+
+@media (max-width:768px){
+
+    header{
+
+        text-align:center;
+
+        padding:15px;
+
+    }
+
+    header h1{
+
+        font-size:1.6rem;
+
+    }
+
+    header p{
+
+        font-size:.95rem;
+
+    }
+
+    .question-card{
+
+        padding:18px;
+
+    }
+
+    textarea{
+
+        min-height:180px;
+
+        font-size:16px;
+
+    }
+
+    input{
+
+        font-size:16px;
+
+    }
+
+    .btn{
+
+        width:100%;
+
+        margin-bottom:10px;
+
+    }
+
+    .btn-group-vertical{
+
+        width:100%;
+
+    }
+
+    .position-fixed{
+
+        left:10px!important;
+
+        right:10px!important;
+
+        bottom:10px!important;
+
+    }
+
+}
+
+/* Très petits écrans */
+
+@media (max-width:480px){
+
+    header h1{
+
+        font-size:1.3rem;
+
+    }
+
+    .progress{
+
+        height:18px;
+
+    }
+
+    .progress-bar{
+
+        font-size:.7rem;
+
+    }
+
+    footer{
+
+        font-size:.8rem;
+
+    }
+
+}
