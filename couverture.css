@@ -1,0 +1,83 @@
+/* =====================================================
+   COUVERTURE
+===================================================== */
+
+.cover{
+
+    min-height:90vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+}
+
+.cover-card{
+
+    max-width:850px;
+
+    width:100%;
+
+    background:rgba(255,255,255,.94);
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:0 15px 45px rgba(0,0,0,.20);
+
+}
+
+.cover-image{
+
+    height:280px;
+
+    background:url("../assets/images/cover.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+.cover-body{
+
+    padding:45px;
+
+    text-align:center;
+
+}
+
+.cover-body h1{
+
+    font-size:3rem;
+
+    color:#8b6a25;
+
+}
+
+.cover-body h2{
+
+    font-size:1.6rem;
+
+    margin-top:20px;
+
+}
+
+.cover-body p{
+
+    font-size:1.2rem;
+
+    color:#666;
+
+}
+
+.cover-footer{
+
+    margin-top:50px;
+
+}
