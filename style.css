@@ -1,0 +1,713 @@
+/* ======================================================
+   LIVRET DE TRANSMISSION FAMILIALE
+====================================================== */
+
+:root{
+
+    --fond:#f7f3eb;
+    --blanc:#ffffff;
+    --beige:#efe6d4;
+    --or:#b08b3a;
+    --or-fonce:#8f6d2f;
+
+    --texte:#2f2f2f;
+    --gris:#777;
+
+    --ombre:0 8px 25px rgba(0,0,0,.08);
+    --rayon:18px;
+
+}
+
+
+
+*{
+
+    box-sizing:border-box;
+
+}
+
+
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+
+body{
+
+    margin:0;
+
+    background:var(--fond);
+
+    color:var(--texte);
+
+    font-family:
+        "Segoe UI",
+        Tahoma,
+        Geneva,
+        Verdana,
+        sans-serif;
+
+}
+
+
+
+/* =======================================
+HEADER
+======================================= */
+
+header{
+
+    background:white;
+
+    border-bottom:1px solid #e8e8e8;
+
+    padding:20px 35px;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+}
+
+
+
+header h1{
+
+    margin:0;
+
+    font-size:2rem;
+
+    color:var(--or);
+
+}
+
+
+
+header p{
+
+    margin-top:8px;
+
+    color:var(--gris);
+
+}
+
+
+
+/* =======================================
+MISE EN PAGE
+======================================= */
+
+#app{
+
+    display:grid;
+
+    grid-template-columns:320px 1fr;
+
+    min-height:100vh;
+
+}
+
+
+
+/* =======================================
+MENU
+======================================= */
+
+aside{
+
+    background:white;
+
+    border-right:1px solid #e7e7e7;
+
+    position:sticky;
+
+    top:95px;
+
+    height:calc(100vh - 95px);
+
+    overflow-y:auto;
+
+    padding:20px;
+
+}
+
+
+
+aside h3{
+
+    margin-top:0;
+
+    margin-bottom:20px;
+
+    color:var(--or);
+
+}
+
+
+
+.list-group-item{
+
+    border:none;
+
+    border-radius:12px;
+
+    margin-bottom:8px;
+
+    transition:.25s;
+
+}
+
+
+
+.list-group-item:hover{
+
+    transform:translateX(5px);
+
+}
+
+
+
+.list-group-item.active{
+
+    background:var(--or);
+
+    border-color:var(--or);
+
+}
+
+
+
+/* =======================================
+CONTENU
+======================================= */
+
+main{
+
+    padding:40px;
+
+}
+
+
+
+.card{
+
+    border:none;
+
+    border-radius:var(--rayon);
+
+    box-shadow:var(--ombre);
+
+}
+
+
+
+.card-body{
+
+    padding:25px;
+
+}
+
+
+
+h2{
+
+    color:var(--or);
+
+    font-weight:700;
+
+}
+
+
+
+.text-muted{
+
+    font-size:1.05rem;
+
+}
+
+
+
+/* =======================================
+CHAMPS
+======================================= */
+
+label{
+
+    font-size:1.08rem;
+
+}
+
+
+
+textarea{
+
+    margin-top:10px;
+
+    min-height:140px;
+
+    border-radius:14px!important;
+
+    padding:15px!important;
+
+    font-size:1rem!important;
+
+    border:1px solid #ddd!important;
+
+    transition:.2s;
+
+}
+
+
+
+textarea:focus{
+
+    border-color:var(--or)!important;
+
+    box-shadow:0 0 0 .2rem rgba(176,139,58,.20)!important;
+
+}
+
+
+
+input[type=file]{
+
+    margin-top:15px;
+
+}
+/* =======================================
+BOUTONS
+======================================= */
+
+.btn{
+
+    border-radius:12px;
+
+    padding:10px 22px;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+.btn-primary{
+
+    background:var(--or);
+
+    border-color:var(--or);
+
+}
+
+.btn-primary:hover{
+
+    background:var(--or-fonce);
+
+    border-color:var(--or-fonce);
+
+    transform:translateY(-2px);
+
+}
+
+.btn-outline-secondary:hover{
+
+    transform:translateY(-2px);
+
+}
+
+
+
+/* =======================================
+BARRE DE PROGRESSION
+======================================= */
+
+.progress{
+
+    height:26px;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    background:#e9e9e9;
+
+    margin-bottom:20px;
+
+}
+
+.progress-bar{
+
+    background:linear-gradient(
+        90deg,
+        #b08b3a,
+        #d7b865
+    );
+
+    font-weight:bold;
+
+    transition:width .4s ease;
+
+}
+
+
+
+/* =======================================
+IMAGES
+======================================= */
+
+img{
+
+    max-width:100%;
+
+    border-radius:12px;
+
+}
+
+.image-preview{
+
+    border:1px solid #ddd;
+
+    border-radius:15px;
+
+    padding:15px;
+
+    margin-top:15px;
+
+    background:white;
+
+    box-shadow:var(--ombre);
+
+}
+
+.image-preview img{
+
+    max-height:300px;
+
+    display:block;
+
+    margin:auto;
+
+}
+
+
+
+/* =======================================
+PIECES JOINTES
+======================================= */
+
+.fichier{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:white;
+
+    padding:12px 15px;
+
+    border-radius:12px;
+
+    margin-top:10px;
+
+    border:1px solid #eee;
+
+}
+
+.fichier span{
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+    white-space:nowrap;
+
+}
+
+
+
+/* =======================================
+SCROLLBAR
+======================================= */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#ececec;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#b08b3a;
+
+    border-radius:50px;
+
+}
+
+
+
+/* =======================================
+ANIMATIONS
+======================================= */
+
+.card{
+
+    animation:apparition .35s ease;
+
+}
+
+@keyframes apparition{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/* =======================================
+RESPONSIVE TABLETTE
+======================================= */
+
+@media(max-width:992px){
+
+    #app{
+
+        grid-template-columns:1fr;
+
+    }
+
+    aside{
+
+        position:relative;
+
+        top:auto;
+
+        height:auto;
+
+        border-right:none;
+
+        border-bottom:1px solid #ddd;
+
+    }
+
+    main{
+
+        padding:25px;
+
+    }
+
+}
+
+
+
+/* =======================================
+RESPONSIVE TELEPHONE
+======================================= */
+
+@media(max-width:768px){
+
+    header{
+
+        padding:18px;
+
+    }
+
+    header h1{
+
+        font-size:1.5rem;
+
+    }
+
+    main{
+
+        padding:15px;
+
+    }
+
+    .card-body{
+
+        padding:18px;
+
+    }
+
+    textarea{
+
+        min-height:180px;
+
+        font-size:16px !important;
+
+    }
+
+    .btn{
+
+        width:100%;
+
+        margin-top:10px;
+
+    }
+
+}
+
+
+
+/* =======================================
+IMPRESSION PDF
+======================================= */
+
+@media print{
+
+    header,
+    aside,
+    .btn{
+
+        display:none!important;
+
+    }
+
+    body{
+
+        background:white;
+
+    }
+
+    main{
+
+        width:100%;
+
+        padding:0;
+
+    }
+
+    .card{
+
+        box-shadow:none;
+
+        border:1px solid #ddd;
+
+        margin-bottom:20px;
+
+        break-inside:avoid;
+
+        page-break-inside:avoid;
+
+    }
+
+    textarea{
+
+        border:none!important;
+
+        box-shadow:none!important;
+
+        resize:none;
+
+    }
+
+}
+
+
+
+/* =======================================
+FOOTER
+======================================= */
+
+footer{
+
+    margin-top:60px;
+
+    padding:30px;
+
+    text-align:center;
+
+    color:#888;
+
+    font-size:.9rem;
+
+}
+body{
+
+    background-image:url("../assets/images/background.jpg");
+
+    background-size:cover;
+
+    background-attachment:fixed;
+
+    background-position:center;
+
+}
+.question-card{
+
+    background:rgba(255,255,255,.96);
+
+    backdrop-filter:blur(4px);
+
+}
+aside .list-group-item{
+
+    border:none;
+
+    border-radius:10px;
+
+    margin-bottom:6px;
+
+    transition:.2s;
+
+}
+
+aside .list-group-item:hover{
+
+    transform:translateX(6px);
+
+}
+
+aside .list-group-item.active{
+
+    background:#b08b3a;
+
+    color:white;
+
+}
+.list-group-item{
+
+    font-weight:500;
+
+}
+
+.list-group-item.active{
+
+    background:#b08b3a!important;
+
+    border-color:#b08b3a!important;
+
+}
+
+.list-group-item:hover{
+
+    background:#f5efe0;
+
+}
