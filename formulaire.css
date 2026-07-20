@@ -1,0 +1,132 @@
+/* =====================================================
+   FORMULAIRES
+===================================================== */
+
+.question-card{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    margin-bottom:30px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+    transition:.25s;
+
+}
+
+.question-card:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.question-card h4{
+
+    color:#b08b3a;
+
+    margin-bottom:20px;
+
+}
+
+.question-card label{
+
+    font-weight:600;
+
+    margin-bottom:8px;
+
+    display:block;
+
+}
+
+.question-card textarea{
+
+    width:100%;
+
+    min-height:180px;
+
+    resize:vertical;
+
+}
+
+.question-card input[type=text],
+
+.question-card input[type=date],
+
+.question-card input[type=email],
+
+.question-card input[type=tel]{
+
+    width:100%;
+
+}
+
+.question-card input,
+
+.question-card textarea{
+
+    border-radius:12px;
+
+}
+
+.question-card input:focus,
+
+.question-card textarea:focus{
+
+    border-color:#b08b3a;
+
+}
+
+.drop-zone{
+
+    margin-top:15px;
+
+    padding:30px;
+
+    border:2px dashed #b08b3a;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.drop-zone.drag{
+
+    background:#f8f3e8;
+
+}
+
+.piece-jointe{
+
+    background:#fafafa;
+
+    border-radius:10px;
+
+    padding:10px;
+
+    margin-top:10px;
+
+    border:1px solid #ddd;
+
+}
+.img-thumbnail{
+
+    border-radius:12px;
+
+    transition:.25s;
+
+}
+
+.img-thumbnail:hover{
+
+    transform:scale(1.05);
+
+}
